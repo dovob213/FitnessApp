@@ -1,9 +1,9 @@
 package model
 
-open class Exercise(
+abstract class Exercise(
     val id: String,
     val name: String,
-    val category: String,
+    val category: List<Goal>,
     val description: String,
     val level: Double,
     val tags: List<exerciseTags>,
@@ -11,7 +11,7 @@ open class Exercise(
 )
 
 object exerciseDB{
-    private val exerciseData = arrayListOf<Exercise>(
+    private val exerciseData = arrayListOf<Exercgise>(
         BenchPress(),
     )
     fun getExerciseData(): List<Exercise> = exerciseData.toList()
