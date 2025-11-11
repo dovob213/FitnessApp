@@ -13,9 +13,7 @@ fun levelSort(list: List<Exercise>,level: Double, distance: Double): List<Exerci
     return levelSort(filteredList,level)
 }
 
-fun categoryFilter(list: List<Exercise>,category:String):List<Exercise> {
-    val GoalCheck = list.contains(Category(category))
-}
+fun categoryFilter(list: List<Exercise>,category:String):List<Exercise> = list.filter {it-> it.category==category}
 
 fun tagFilter(tag: String?): List<Exercise>? {
     if(tag==null) return null

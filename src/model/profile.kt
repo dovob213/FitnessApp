@@ -8,7 +8,7 @@ object userProfile {
     var level : Int? = null; private set
     var name : String? = null; private set
     var place : List<Place>? = null; private set
-    var goal : Goal? = null; private set
+    var goal : List<Goal>? = null; private set
 
     object update{
         fun height(height: Double?) = height?.let { userProfile.height = it }
@@ -17,7 +17,7 @@ object userProfile {
         fun level(level: Int?) = level?.let { userProfile.level = it }
         fun name(name: String?) = name?.let { userProfile.name = it }
         fun place(place: List<Place>?) = place?.let { userProfile.place = it}
-        fun goal(goal: Goal?) = goal?.let { userProfile.goal = it }
+        fun goal(goal: List<Goal>?) = goal?.let { userProfile.goal = it }
         }
 
 }
