@@ -1,9 +1,13 @@
-package com.yourteam.fitnessapp.data
+package com.example.fitness.data
 
-import com.yourteam.fitnessapp.data.impl.FirebaseExerciseRepository
-import com.yourteam.fitnessapp.data.impl.FirebaseRoutineRepository
-import com.yourteam.fitnessapp.data.impl.FirebaseUserProfileRepository
-import com.yourteam.fitnessapp.data.impl.FirebaseWorkoutRepository
+import com.example.fitness.data.impl.FirebaseExerciseRepository
+import com.example.fitness.data.impl.FirebaseRoutineRepository
+import com.example.fitness.data.impl.FirebaseUserProfileRepository
+import com.example.fitness.data.impl.FirebaseWorkoutRepository
+import com.example.fitness.data.impl.MockExerciseRepository
+import com.example.fitness.data.impl.MockWorkoutRepository
+import com.example.fitness.data.impl.MockRoutineRepository
+import com.example.fitness.data.impl.MockUserProfileRepository
 
 object RepositoryProvider {
 

@@ -1,8 +1,8 @@
 package com.example.fitness.data.impl
 
 import com.google.firebase.firestore.FirebaseFirestore
-import com.yourteam.fitnessapp.data.RoutineRepository
-import com.yourteam.fitnessapp.model.Routine
+import com.example.fitness.data.RoutineRepository
+import com.example.fitness.model.Routine
 import kotlinx.coroutines.tasks.await
 
 class FirebaseRoutineRepository : RoutineRepository {

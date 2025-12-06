@@ -1,9 +1,8 @@
 package com.example.fitness.data.impl
 
-
 import com.google.firebase.firestore.FirebaseFirestore
-import com.yourteam.fitnessapp.data.UserProfileRepository
-import com.yourteam.fitnessapp.model.UserProfile
+import com.example.fitness.data.UserProfileRepository
+import com.example.fitness.model.UserProfile
 import kotlinx.coroutines.tasks.await
 
 class FirebaseUserProfileRepository : UserProfileRepository {
@@ -25,10 +24,10 @@ class FirebaseUserProfileRepository : UserProfileRepository {
 
     override suspend fun saveUserProfile(profile: UserProfile) {
         try {
-            collection.document(profile.id)
+            collection.document(profile.userId)
                 .set(profile)
                 .await()
-            println("Firebase: Profile saved - ${profile.id}")
+            println("Firebase: Profile saved - ${profile.userId}")
         } catch (e: Exception) {
             println("Firebase Error: ${e.message}")
             throw e
@@ -37,10 +36,10 @@ class FirebaseUserProfileRepository : UserProfileRepository {
 
     override suspend fun updateUserProfile(profile: UserProfile) {
         try {
-            collection.document(profile.id)
+            collection.document(profile.userId)
                 .set(profile)
                 .await()
-            println("Firebase: Profile updated - ${profile.id}")
+            println("Firebase: Profile updated - ${profile.userId}")
         } catch (e: Exception) {
             println("Firebase Error: ${e.message}")
             throw e

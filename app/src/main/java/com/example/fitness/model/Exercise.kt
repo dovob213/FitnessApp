@@ -1,22 +1,11 @@
-package model
+package com.example.fitness.model
 
-abstract class Exercise(
-    val id: String,
-    val name: String,
-    val category: List<Goal>,
-    val description: String,
-    val level: Double,
-    val tags: List<exerciseTags>,
-    val location: List<Place>
+data class Exercise(
+    val id: String = "",
+    val name: String = "",
+    val category: String = "",
+    val description: String = "",
+    val level: Double = 0.0,
+    val tags: List<String> = emptyList(),
+    val location: String = ""
 )
-
-object exerciseDB{
-    private val exerciseData = arrayListOf<Exercgise>(
-        BenchPress(),
-    )
-    fun getExerciseData(): List<Exercise> = exerciseData.toList()
-
-    fun userUpdate(exerciseData: Exercise) {
-        this.exerciseData.add(exerciseData)
-    }
-}

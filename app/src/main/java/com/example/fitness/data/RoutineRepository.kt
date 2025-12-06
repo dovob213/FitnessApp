@@ -1,6 +1,6 @@
-package data
+package com.example.fitness.data
 
-import model.Routine
+import com.example.fitness.model.Routine
 
 interface RoutineRepository {
     // 루틴 1개 가져오기

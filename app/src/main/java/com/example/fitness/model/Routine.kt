@@ -1,15 +1,15 @@
-package model
+package com.example.fitness.model
 
 data class RoutineExercise(
     val exercise: Exercise,
-    var targetSets: Int ,
-    var targetReps: Int ,
+    var targetSets: Int,
+    var targetReps: Int,
     var targetWeight: Double
 )
 
 data class Routine(
-    val id: Int,
-    var name: String,
+    val id: String = "",
+    var name: String = "",
     val exercises: MutableList<RoutineExercise> = mutableListOf()
 ) {
     fun addExercise(exercise: Exercise, sets: Int, reps: Int, weight: Double) {

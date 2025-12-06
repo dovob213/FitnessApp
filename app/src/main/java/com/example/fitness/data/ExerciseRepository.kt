@@ -1,6 +1,6 @@
-package data
+package com.example.fitness.data
 
-import model.Exercise
+import com.example.fitness.model.Exercise
 
 
 // 운동 정보 '가져오는' 규칙으로, 실제 구현은 나중에 파이어베이스로 구현 예정이요

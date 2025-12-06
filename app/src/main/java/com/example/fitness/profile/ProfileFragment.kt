@@ -1,4 +1,4 @@
-package com.fitnessapp.ui.profile
+package com.example.fitness.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +10,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.yourteam.fitnessapp.R
-import com.yourteam.fitnessapp.data.RepositoryProvider
-import com.yourteam.fitnessapp.model.UserProfile
+import com.example.fitness.R
+import com.example.fitness.data.RepositoryProvider
+import com.example.fitness.model.UserProfile
 import kotlinx.coroutines.launch
 
 class ProfileFragment : Fragment() {
@@ -82,12 +82,11 @@ class ProfileFragment : Fragment() {
             if (currentProfile == null) {
                 // 프로필이 없으면 기본 프로필 생성
                 currentProfile = UserProfile(
-                    id = userId,
+                    userId = userId,
                     name = "사용자",
                     age = 0,
                     height = 0.0,
-                    weight = 0.0,
-                    gender = "male"
+                    weight = 0.0
                 )
                 profileManager.saveProfile(currentProfile!!)
             }
@@ -97,7 +96,7 @@ class ProfileFragment : Fragment() {
     }
 
     private fun displayProfile(profile: UserProfile) {
-        tvUserId.text = "ID: ${profile.id}"
+        tvUserId.text = "ID: ${profile.userId}"
         etName.setText(profile.name)
         etAge.setText(if (profile.age > 0) profile.age.toString() else "")
         etHeight.setText(if (profile.height > 0) profile.height.toString() else "")
@@ -146,8 +145,7 @@ class ProfileFragment : Fragment() {
                 name = name,
                 age = age,
                 height = height,
-                weight = weight,
-                lastUpdated = System.currentTimeMillis()
+                weight = weight
             )
 
             profileManager.updateProfile(updatedProfile)

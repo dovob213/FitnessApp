@@ -1,12 +1,12 @@
-package model
+package com.example.fitness.model
 
 // 운동 몇 키로 몇 개 몇 세트 했는지 기록하기
 
 
 // '1세트'의 정보
 data class ExerciseSet(
-    val weight: Double   // 무게(kg)
-    val reps: Int         // 횟수(개)
+    val weight: Double,   // 무게(kg)
+    val reps: Int,         // 횟수(개)
     val completed: Boolean = true
 )
 

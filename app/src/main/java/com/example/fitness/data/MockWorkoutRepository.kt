@@ -1,7 +1,8 @@
-package data
+package com.example.fitness.data.impl
 
-import model.WorkoutLog
-import model.ExerciseSet
+import com.example.fitness.data.WorkoutRepository
+import com.example.fitness.model.WorkoutLog
+import com.example.fitness.model.ExerciseSet
 
 
 /* 파이어베이스에 실제 데이터 입력 구현 이전에,
