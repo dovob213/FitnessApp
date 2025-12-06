@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fitness.HomeFragment"
+        android:label="홈"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_exercise_search"
+            app:destination="@id/exerciseSearchFragment" />
+        <action
+            android:id="@+id/action_home_to_routine"
+            app:destination="@id/routineFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.fitness.profile.ProfileFragment"
+        android:label="프로필"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- 추후 추가될 fragment들 (다른 팀원 담당) -->
+    <fragment
+        android:id="@+id/exerciseSearchFragment"
+        android:name="com.example.fitness.PlaceholderFragment"
+        android:label="운동 검색" />
+
+    <fragment
+        android:id="@+id/routineFragment"
+        android:name="com.example.fitness.PlaceholderFragment"
+        android:label="루틴" />
+
+</navigation>
