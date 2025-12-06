@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun initializeRepositories() {
         // Phase 1: Mock 사용
-        // RepositoryProvider.initializeWithMock()
+        RepositoryProvider.initializeWithMock()
 
         // Phase 2: Firebase 사용
-        RepositoryProvider.initialize()
+        // RepositoryProvider.initialize()
     }
 
     private fun setupNavigation() {
