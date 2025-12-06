@@ -2,7 +2,7 @@ package com.example.fitness
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.fitness.data.RepositoryProvider
@@ -29,10 +29,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavigation() {
-        val navController = findNavController(R.id.nav_host_fragment)
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        // NavHostFragment를 통해 NavController 가져오기
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
 
         // Bottom Navigation과 연결
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNav.setupWithNavController(navController)
     }
 }
