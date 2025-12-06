@@ -105,3 +105,5 @@
             app:layout_constraintTop_toBottomOf="@id/btnStartWorkout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
