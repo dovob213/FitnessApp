@@ -1,8 +1,6 @@
-package data
+package com.example.fitness.data
 
-//package com.yourteam.fitnessapp.data
-
-import com.yourteam.fitnessapp.model.UserProfile
+import com.example.fitness.model.UserProfile
 
 interface UserProfileRepository {
     suspend fun getUserProfile(userId: String): UserProfile?

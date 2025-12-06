@@ -1,6 +1,6 @@
-package data
+package com.example.fitness.data
 
-import model.WorkoutLog
+import com.example.fitness.model.WorkoutLog
 
 //운동 기록 '저장 및 불러오기' 규칙
 

@@ -1,6 +1,6 @@
-package com.example.fitness//package com.yourteam.fitnessapp.ui.main
+package com.example.fitness
 
-import com.yourteam.fitnessapp.data.WorkoutRepository
+import com.example.fitness.data.WorkoutRepository
 import java.util.Calendar
 
 class TodaySummaryManager(

@@ -1,7 +1,9 @@
-package data
+package com.example.fitness.data.impl
 
-import model.Routine
-import model.RoutineExercise
+import com.example.fitness.data.RoutineRepository
+import com.example.fitness.model.Routine
+import com.example.fitness.model.RoutineExercise
+import com.example.fitness.model.Exercise
 
 
 /* 파이어베이스에 실제 데이터 입력 구현 이전에,
@@ -14,22 +16,22 @@ class MockRoutineRepository : RoutineRepository {
     private val routines = mutableListOf<Routine>()
 
     // 테스트용 가라 루틴 미리 넣기
-    
+
     init {
         // "가슴 루틴" 루틴
         routines.add(
             Routine(
                 id = "routine001",
                 name = "가슴 루틴",
-                exercises = listOf(
+                exercises = mutableListOf(
                     RoutineExercise(
-                        exerciseId = "ex001",
+                        exercise = Exercise(id = "ex001", name = "벤치프레스", category = "가슴"),
                         targetSets = 3,
                         targetReps = 10,
                         targetWeight = 70.0
                     ),
                     RoutineExercise(
-                        exerciseId = "ex005", // 덤벨프레스
+                        exercise = Exercise(id = "ex005", name = "덤벨프레스", category = "가슴"),
                         targetSets = 3,
                         targetReps = 12,
                         targetWeight = 30.0
@@ -43,15 +45,15 @@ class MockRoutineRepository : RoutineRepository {
             Routine(
                 id = "routine002",
                 name = "하체 루틴",
-                exercises = listOf(
+                exercises = mutableListOf(
                     RoutineExercise(
-                        exerciseId = "ex002", // 스쿼트
+                        exercise = Exercise(id = "ex002", name = "스쿼트", category = "하체"),
                         targetSets = 4,
                         targetReps = 8,
                         targetWeight = 100.0
                     ),
                     RoutineExercise(
-                        exerciseId = "ex006", // 레그프레스
+                        exercise = Exercise(id = "ex006", name = "레그프레스", category = "하체"),
                         targetSets = 3,
                         targetReps = 12,
                         targetWeight = 150.0
@@ -65,21 +67,21 @@ class MockRoutineRepository : RoutineRepository {
             Routine(
                 id = "routine003",
                 name = "전신 루틴",
-                exercises = listOf(
+                exercises = mutableListOf(
                     RoutineExercise(
-                        exerciseId = "ex001", // 벤치프레스
+                        exercise = Exercise(id = "ex001", name = "벤치프레스", category = "가슴"),
                         targetSets = 3,
                         targetReps = 10,
                         targetWeight = 70.0
                     ),
                     RoutineExercise(
-                        exerciseId = "ex002", // 스쿼트
+                        exercise = Exercise(id = "ex002", name = "스쿼트", category = "하체"),
                         targetSets = 3,
                         targetReps = 10,
                         targetWeight = 100.0
                     ),
                     RoutineExercise(
-                        exerciseId = "ex007", // 시티드로우
+                        exercise = Exercise(id = "ex007", name = "시티드로우", category = "등"),
                         targetSets = 4,
                         targetReps = 12,
                         targetWeight = 45.0
