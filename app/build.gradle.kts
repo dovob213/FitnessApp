@@ -50,8 +50,13 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation(platform(libs.firebase.bom))
+    // Import Firestore (No version needed because of the BOM)
+    implementation(libs.firebase.firestore)
+
+    implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
     implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-analytics")
 
     // Navigation
     val navVersion = "2.7.6"
