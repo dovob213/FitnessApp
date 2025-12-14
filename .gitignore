@@ -2,9 +2,24 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+*.iml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/caches
+.idea/libraries
 
 ### Kotlin ###
 .kotlin
+
+### Android ###
+.gradle
+/local.properties
+build/
+/captures
+.externalNativeBuild
+.cxx
 
 ### Eclipse ###
 .apt_generated
