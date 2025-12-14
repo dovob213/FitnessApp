@@ -49,12 +49,9 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 
-    // Firebase
+    // Firebase (BOM manages versions)
     implementation(platform(libs.firebase.bom))
-    // Import Firestore (No version needed because of the BOM)
-    implementation(libs.firebase.firestore)
-
-    implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
+    implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-analytics")
 
