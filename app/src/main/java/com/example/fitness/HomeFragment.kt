@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.fitness.data.RepositoryProvider
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -22,6 +24,9 @@ class HomeFragment : Fragment() {
     private val workoutRepo by lazy {
         RepositoryProvider.getWorkoutRepository()
     }
+    private val exerciseRepo by lazy {
+        RepositoryProvider.getExerciseRepository()
+    }
 
     private lateinit var summaryManager: TodaySummaryManager
 
@@ -29,10 +34,15 @@ class HomeFragment : Fragment() {
     private lateinit var tvWelcome: TextView
     private lateinit var tvDate: TextView
     private lateinit var calendarView: CalendarView
+    private lateinit var tvSelectedDateLabel: TextView
+    private lateinit var rvWorkoutHistory: RecyclerView
+    private lateinit var tvNoWorkouts: TextView
     private lateinit var tvTodayWorkouts: TextView
     private lateinit var tvTodayVolume: TextView
     private lateinit var btnStartWorkout: Button
     private lateinit var btnQuickRoutine: Button
+
+    private lateinit var workoutHistoryAdapter: WorkoutHistoryAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,10 +70,18 @@ class HomeFragment : Fragment() {
         tvWelcome = view.findViewById(R.id.tvWelcome)
         tvDate = view.findViewById(R.id.tvDate)
         calendarView = view.findViewById(R.id.calendarView)
+        tvSelectedDateLabel = view.findViewById(R.id.tvSelectedDateLabel)
+        rvWorkoutHistory = view.findViewById(R.id.rvWorkoutHistory)
+        tvNoWorkouts = view.findViewById(R.id.tvNoWorkouts)
         tvTodayWorkouts = view.findViewById(R.id.tvTodayWorkouts)
         tvTodayVolume = view.findViewById(R.id.tvTodayVolume)
         btnStartWorkout = view.findViewById(R.id.btnStartWorkout)
         btnQuickRoutine = view.findViewById(R.id.btnQuickRoutine)
+
+        // RecyclerView 설정
+        workoutHistoryAdapter = WorkoutHistoryAdapter()
+        rvWorkoutHistory.layoutManager = LinearLayoutManager(requireContext())
+        rvWorkoutHistory.adapter = workoutHistoryAdapter
 
         // 현재 날짜 표시
         val dateFormat = SimpleDateFormat("yyyy년 M월 d일 EEEE", Locale.KOREAN)
@@ -74,13 +92,16 @@ class HomeFragment : Fragment() {
 
         // 달력 날짜 선택 리스너
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            // 선택한 날짜 표시 (나중에 운동 기록 표시 기능 추가 가능)
-            val selectedDate = Calendar.getInstance().apply {
-                set(year, month, dayOfMonth)
-            }
-            val selectedDateFormat = SimpleDateFormat("yyyy년 M월 d일 EEEE", Locale.KOREAN)
-            tvDate.text = selectedDateFormat.format(selectedDate.time)
+            loadWorkoutsForDate(year, month, dayOfMonth)
         }
+
+        // 오늘 날짜의 운동 기록 로드
+        val today = Calendar.getInstance()
+        loadWorkoutsForDate(
+            today.get(Calendar.YEAR),
+            today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH)
+        )
     }
 
     private fun loadTodaySummary() {
@@ -116,9 +137,66 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun loadWorkoutsForDate(year: Int, month: Int, dayOfMonth: Int) {
+        lifecycleScope.launch {
+            // 선택한 날짜 표시
+            val selectedDate = Calendar.getInstance().apply {
+                set(year, month, dayOfMonth)
+            }
+            val selectedDateFormat = SimpleDateFormat("yyyy년 M월 d일 EEEE", Locale.KOREAN)
+            tvDate.text = selectedDateFormat.format(selectedDate.time)
+            tvSelectedDateLabel.text = "${selectedDateFormat.format(selectedDate.time)}의 운동"
+
+            // 해당 날짜의 시작과 끝 타임스탬프
+            val startOfDay = selectedDate.apply {
+                set(Calendar.HOUR_OF_DAY, 0)
+                set(Calendar.MINUTE, 0)
+                set(Calendar.SECOND, 0)
+                set(Calendar.MILLISECOND, 0)
+            }.timeInMillis
+
+            val endOfDay = selectedDate.apply {
+                set(Calendar.HOUR_OF_DAY, 23)
+                set(Calendar.MINUTE, 59)
+                set(Calendar.SECOND, 59)
+                set(Calendar.MILLISECOND, 999)
+            }.timeInMillis
+
+            // 운동 기록 가져오기
+            val workoutLogs = workoutRepo.getWorkoutLogsByDateRange(startOfDay, endOfDay)
+
+            if (workoutLogs.isEmpty()) {
+                // 운동 기록이 없을 때
+                rvWorkoutHistory.visibility = View.GONE
+                tvNoWorkouts.visibility = View.VISIBLE
+            } else {
+                // 운동 기록이 있을 때
+                tvNoWorkouts.visibility = View.GONE
+                rvWorkoutHistory.visibility = View.VISIBLE
+
+                // 운동 이름과 함께 표시
+                val workoutsWithNames = workoutLogs.map { log ->
+                    val exercise = exerciseRepo.getExercise(log.exerciseId)
+                    log to (exercise?.name ?: "알 수 없는 운동")
+                }
+
+                workoutHistoryAdapter.setWorkouts(workoutsWithNames)
+            }
+        }
+    }
+
     override fun onResume() {
         super.onResume()
         // 화면 돌아올 때마다 새로고침
         loadTodaySummary()
+
+        // 현재 선택된 날짜의 운동 기록 다시 로드
+        val date = Calendar.getInstance()
+        date.timeInMillis = calendarView.date
+        loadWorkoutsForDate(
+            date.get(Calendar.YEAR),
+            date.get(Calendar.MONTH),
+            date.get(Calendar.DAY_OF_MONTH)
+        )
     }
 }

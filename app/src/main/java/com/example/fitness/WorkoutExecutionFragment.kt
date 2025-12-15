@@ -18,6 +18,8 @@ import com.example.fitness.model.Routine
 import com.example.fitness.model.RoutineExercise
 import com.example.fitness.model.WorkoutLog
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.Job
 
 class WorkoutExecutionFragment : Fragment() {
 
@@ -36,6 +38,7 @@ class WorkoutExecutionFragment : Fragment() {
     private lateinit var tvProgress: TextView
     private lateinit var tvExerciseName: TextView
     private lateinit var tvTargetInfo: TextView
+    private lateinit var tvTimer: TextView
     private lateinit var rvSets: RecyclerView
     private lateinit var btnAddSet: Button
     private lateinit var btnFinishExercise: Button
@@ -45,6 +48,11 @@ class WorkoutExecutionFragment : Fragment() {
     private var currentExerciseIndex = 0
     private lateinit var setAdapter: ExerciseSetAdapter
     private val completedWorkouts = mutableListOf<WorkoutLog>()
+
+    // 타이머
+    private var startTime: Long = 0
+    private var isTimerRunning = false
+    private var timerJob: Job? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -63,6 +71,7 @@ class WorkoutExecutionFragment : Fragment() {
         tvProgress = view.findViewById(R.id.tvProgress)
         tvExerciseName = view.findViewById(R.id.tvExerciseName)
         tvTargetInfo = view.findViewById(R.id.tvTargetInfo)
+        tvTimer = view.findViewById(R.id.tvTimer)
         rvSets = view.findViewById(R.id.rvSets)
         btnAddSet = view.findViewById(R.id.btnAddSet)
         btnFinishExercise = view.findViewById(R.id.btnFinishExercise)
@@ -92,7 +101,31 @@ class WorkoutExecutionFragment : Fragment() {
             }
 
             displayCurrentExercise()
+            startTimer()
         }
+    }
+
+    private fun startTimer() {
+        if (!isTimerRunning) {
+            isTimerRunning = true
+            startTime = System.currentTimeMillis()
+
+            timerJob = lifecycleScope.launch {
+                while (isTimerRunning) {
+                    val elapsedTime = (System.currentTimeMillis() - startTime) / 1000
+                    val minutes = elapsedTime / 60
+                    val seconds = elapsedTime % 60
+                    tvTimer.text = String.format("%02d:%02d", minutes, seconds)
+                    delay(1000)
+                }
+            }
+        }
+    }
+
+    private fun stopTimer(): Long {
+        isTimerRunning = false
+        timerJob?.cancel()
+        return (System.currentTimeMillis() - startTime) / 1000
     }
 
     private fun displayCurrentExercise() {
@@ -142,13 +175,17 @@ class WorkoutExecutionFragment : Fragment() {
             return
         }
 
+        // 현재 운동 시간 계산
+        val duration = stopTimer()
+
         // WorkoutLog 생성
         val workoutLog = WorkoutLog(
             id = "",
             exerciseId = currentExercise.exercise.id,
             date = System.currentTimeMillis(),
             sets = sets,
-            memo = ""
+            memo = "",
+            durationSeconds = duration
         )
         completedWorkouts.add(workoutLog)
 
@@ -161,6 +198,8 @@ class WorkoutExecutionFragment : Fragment() {
         } else {
             // 다음 운동 표시
             displayCurrentExercise()
+            // 다음 운동 타이머 재시작
+            startTimer()
         }
     }
 
@@ -189,5 +228,10 @@ class WorkoutExecutionFragment : Fragment() {
                 ).show()
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        stopTimer()
     }
 }
