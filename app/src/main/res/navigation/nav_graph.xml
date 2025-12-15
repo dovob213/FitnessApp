@@ -27,11 +27,19 @@
         android:label="프로필"
         tools:layout="@layout/fragment_profile" />
 
-    <!-- 추후 추가될 fragment들 (다른 팀원 담당) -->
+    <!-- 운동 검색 화면 -->
     <fragment
         android:id="@+id/exerciseSearchFragment"
-        android:name="com.example.fitness.PlaceholderFragment"
-        android:label="운동 검색" />
+        android:name="com.example.fitness.presentation.fragment.ExerciseSearchFragment"
+        android:label="운동 검색"
+        tools:layout="@layout/fragment_exercise_search" />
+
+    <!-- 대시보드 화면 -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.fitness.DashboardFragment"
+        android:label="대시보드"
+        tools:layout="@layout/activity_dashboard" />
 
     <fragment
         android:id="@+id/routineFragment"

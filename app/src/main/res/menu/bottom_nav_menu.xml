@@ -2,11 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:icon="@android:drawable/ic_menu_day"
+        android:icon="@drawable/ic_home"
         android:title="홈" />
 
     <item
+        android:id="@+id/exerciseSearchFragment"
+        android:icon="@drawable/ic_search"
+        android:title="운동 검색" />
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="대시보드" />
+
+    <item
         android:id="@+id/profileFragment"
-        android:icon="@android:drawable/ic_menu_myplaces"
+        android:icon="@drawable/ic_profile"
         android:title="프로필" />
 </menu>
