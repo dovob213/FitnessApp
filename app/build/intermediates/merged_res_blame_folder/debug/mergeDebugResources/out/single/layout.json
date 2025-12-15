@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\dialog_select_level.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\dialog_select_level.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\item_exercise_set.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_exercise_set.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\item_workout_history.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_workout_history.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-mergeDebugResources-54:/layout/item_exercise.xml",
+        "source": "com.example.fitness.app-main-57:/layout/item_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\dialog_edit_slider.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\dialog_edit_slider.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\dialog_edit_weight.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\dialog_edit_weight.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-mergeDebugResources-54:/layout/item_routine_exercise.xml",
+        "source": "com.example.fitness.app-main-57:/layout/item_routine_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\item_routine.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_routine.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-mergeDebugResources-54:/layout/activity_dashboard.xml",
+        "source": "com.example.fitness.app-main-57:/layout/activity_dashboard.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-mergeDebugResources-54:/layout/fragment_exercise_search.xml",
+        "source": "com.example.fitness.app-main-57:/layout/fragment_exercise_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\fragment_routine_selection.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_routine_selection.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-mergeDebugResources-54:\\layout\\fragment_workout_execution.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_workout_execution.xml"
+    }
+]

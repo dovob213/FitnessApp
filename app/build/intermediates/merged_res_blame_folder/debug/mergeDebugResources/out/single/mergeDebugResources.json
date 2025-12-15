@@ -1,0 +1,190 @@
+[
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_item_exercise.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_edit_icon_background.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\edit_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_edit.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_dialog_edit_weight.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\dialog_edit_weight.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_item_exercise_set.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_exercise_set.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_play_arrow.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_play_arrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_circular_progress.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\circular_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_item_workout_history.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_workout_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-debug-55:/drawable_ic_search.xml.flat",
+        "source": "com.example.fitness.app-main-57:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_circle_bg_dark.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\circle_bg_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_activity_dashboard.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\activity_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_check.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_close.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_dialog_edit_slider.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\dialog_edit_slider.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-debug-55:/drawable_ic_dashboard.xml.flat",
+        "source": "com.example.fitness.app-main-57:/drawable/ic_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_dialog_select_level.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\dialog_select_level.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_fragment_routine_selection.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_routine_selection.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_fragment_workout_execution.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_workout_execution.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_fragment_exercise_search.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_exercise_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-debug-55:/drawable_ic_profile.xml.flat",
+        "source": "com.example.fitness.app-main-57:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-debug-55:/drawable_ic_home.xml.flat",
+        "source": "com.example.fitness.app-main-57:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_item_routine.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_routine.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.fitness.app-debug-55:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.fitness.app-main-57:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\drawable_profile_background.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\drawable\\profile_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\layout_item_routine_exercise.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\layout\\item_routine_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-debug-55:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\8.13\\com.example.fitness.app-main-57:\\menu\\bottom_nav_menu.xml"
+    }
+]

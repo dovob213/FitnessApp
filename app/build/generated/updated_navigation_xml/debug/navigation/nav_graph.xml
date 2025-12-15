@@ -1,0 +1,76 @@
+<navigation
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/nav_graph"
+app:startDestination="@id/profileFragment" >
+<fragment
+    android:id="@+id/homeFragment"
+    android:name="com.example.fitness.HomeFragment"
+    android:label="홈"
+    tools:layout="@layout/fragment_home" >
+
+    <action
+        android:id="@+id/action_home_to_exercise_search"
+        app:destination="@id/exerciseSearchFragment" />
+    <action
+        android:id="@+id/action_home_to_routine"
+        app:destination="@id/routineFragment" />
+    <action
+        android:id="@+id/action_home_to_routine_selection"
+        app:destination="@id/routineSelectionFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/profileFragment"
+    android:name="com.example.fitness.profile.ProfileFragment"
+    android:label="프로필"
+    tools:layout="@layout/fragment_profile" />
+
+<!-- 운동 검색 화면 -->
+<fragment
+    android:id="@+id/exerciseSearchFragment"
+    android:name="com.example.fitness.presentation.fragment.ExerciseSearchFragment"
+    android:label="운동 검색"
+    tools:layout="@layout/fragment_exercise_search" />
+
+<!-- 대시보드 화면 -->
+<fragment
+    android:id="@+id/dashboardFragment"
+    android:name="com.example.fitness.DashboardFragment"
+    android:label="대시보드"
+    tools:layout="@layout/activity_dashboard" />
+<fragment
+    android:id="@+id/routineFragment"
+    android:name="com.example.fitness.PlaceholderFragment"
+    android:label="루틴" />
+
+<!-- 루틴 선택 화면 -->
+<fragment
+    android:id="@+id/routineSelectionFragment"
+    android:name="com.example.fitness.RoutineSelectionFragment"
+    android:label="루틴 선택"
+    tools:layout="@layout/fragment_routine_selection" >
+
+    <action
+        android:id="@+id/action_routine_selection_to_workout_execution"
+        app:destination="@id/workoutExecutionFragment" />
+
+</fragment>
+
+<!-- 운동 실행 화면 -->
+<fragment
+    android:id="@+id/workoutExecutionFragment"
+    android:name="com.example.fitness.WorkoutExecutionFragment"
+    android:label="운동 진행"
+    tools:layout="@layout/fragment_workout_execution" >
+
+    <argument
+        android:name="routineId"
+        app:argType="string" />
+    <argument
+        android:name="routineName"
+        app:argType="string" />
+
+</fragment>
+</navigation>
