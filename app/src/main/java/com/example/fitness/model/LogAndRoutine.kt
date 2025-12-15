@@ -1,19 +1,21 @@
 package com.example.fitness.model
 
+// 운동 몇 키로 몇 개 몇 세트 했는지 기록하기
 
+// '1세트'의 정보
 data class ExerciseSet(
-    val weight: Double,   // 무게 (kg)
-    val reps: Int,        // 횟수
+    val weight: Double,   // 무게(kg)
+    val reps: Int,         // 횟수(개)
     val completed: Boolean = true
 )
 
-
 data class WorkoutLog(
-    val logId: String = "",
-    val exerciseId: String,       // 어떤 운동을 했는지 (Exercise.id 참조)
-    val date: Long,               // 날짜 (Timestamp)
-    val sets: List<ExerciseSet>,  // 수행한 세트들
-    val memo: String = ""
+    val id: String = "",          // 고유번호. 코드
+    val exerciseId: String = "",       // 운동 종목 코드
+    val date: Long = 0L,             // 날짜(밀리초로 구하기?)
+    val sets: List<ExerciseSet> = emptyList(),   // 세트 목록
+    val memo: String = "",       // 비고란
+    val durationSeconds: Long = 0L  // 운동 시간 (초)
 )
 
 
@@ -26,8 +28,8 @@ data class RoutineExercise(
 
 
 data class Routine(
-    val id: String,
-    var name: String,
+    val id: String = "",
+    var name: String = "",
     val exercises: MutableList<RoutineExercise> = mutableListOf()
 ) {
     fun addExercise(exercise: Exercise, sets: Int, reps: Int, weight: Double) {
