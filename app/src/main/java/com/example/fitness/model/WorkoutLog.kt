@@ -12,10 +12,11 @@ data class ExerciseSet(
 
 data class WorkoutLog(
     val id: String = "",          // 고유번호. 코드
-    val exerciseId: String,       // 운동 종목 코드
-    val date: Long,             // 날짜(밀리초로 구하기?)
-    val sets: List<ExerciseSet>,   // 세트 목록
-    val memo: String = ""       // 비고란
+    val exerciseId: String = "",       // 운동 종목 코드
+    val date: Long = 0L,             // 날짜(밀리초로 구하기?)
+    val sets: List<ExerciseSet> = emptyList(),   // 세트 목록
+    val memo: String = "",       // 비고란
+    val durationSeconds: Long = 0L  // 운동 시간 (초)
 )
 
 

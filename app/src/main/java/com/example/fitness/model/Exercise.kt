@@ -17,5 +17,6 @@ data class Exercise(
     var description: String = "",
     var level: Double = 0.0,
     var tags: List<String> = emptyList(),
-    var location: String = ""
+    var location: String = "",
+    var imageUrl: String = ""  // 운동 사진 URL
 )
